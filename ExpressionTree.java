@@ -29,9 +29,10 @@ public class ExpressionTree{
 	/*return the value of the specified expression tree*/
 
 	public double evaluate(){
-		/*you are to write this method*/
-		return 0.0;
-
+		if (isValue()) {
+			return getValue();
+		}
+		return apply(getOp(), getLeft().evaluate(), getRight().evaluate());
 	}
 
 
